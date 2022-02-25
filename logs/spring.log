@@ -1,0 +1,369 @@
+2022-02-25 15:55:28.928  INFO 7238 --- [main] c.i.e.EthereumtrackerApplication         : Starting EthereumtrackerApplication using Java 11.0.13 on chamberdeMacBook-Pro.local with PID 7238 (/Users/chamber/IdeaProjects/ethereumtracker/target/classes started by chamber in /Users/chamber/IdeaProjects/ethereumtracker)
+2022-02-25 15:55:28.930  INFO 7238 --- [main] c.i.e.EthereumtrackerApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 15:55:30.010  INFO 7238 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3334 (http)
+2022-02-25 15:55:30.017  INFO 7238 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 15:55:30.017  INFO 7238 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 15:55:30.064  INFO 7238 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 15:55:30.064  INFO 7238 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1021 ms
+2022-02-25 15:55:32.048  WARN 7238 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+2022-02-25 15:55:32.051  INFO 7238 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-25 15:55:32.069  INFO 7238 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-25 15:55:32.089 ERROR 7238 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.6.3.jar:2.6.3]
+	at com.iotex.ethereumtracker.EthereumtrackerApplication.main(EthereumtrackerApplication.java:19) ~[classes/:na]
+Caused by: com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:738) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:726) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:721) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:643) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:623) ~[fastjson-1.2.78.jar:na]
+	at com.iotex.ethereumtracker.core.EthereumTracker.getBranchesAndTags(EthereumTracker.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.15.jar:5.3.15]
+	... 18 common frames omitted
+
+2022-02-25 15:56:40.035  INFO 7250 --- [main] c.i.e.EthereumtrackerApplication         : Starting EthereumtrackerApplication using Java 11.0.13 on chamberdeMacBook-Pro.local with PID 7250 (/Users/chamber/IdeaProjects/ethereumtracker/target/classes started by chamber in /Users/chamber/IdeaProjects/ethereumtracker)
+2022-02-25 15:56:40.038  INFO 7250 --- [main] c.i.e.EthereumtrackerApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 15:56:41.002  INFO 7250 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3334 (http)
+2022-02-25 15:56:41.009  INFO 7250 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 15:56:41.010  INFO 7250 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 15:56:41.064  INFO 7250 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 15:56:41.064  INFO 7250 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 975 ms
+2022-02-25 15:56:43.873  WARN 7250 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+2022-02-25 15:56:43.876  INFO 7250 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-25 15:56:43.895  INFO 7250 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-25 15:56:43.916 ERROR 7250 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.6.3.jar:2.6.3]
+	at com.iotex.ethereumtracker.EthereumtrackerApplication.main(EthereumtrackerApplication.java:19) ~[classes/:na]
+Caused by: com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:738) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:726) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:721) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:643) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:623) ~[fastjson-1.2.78.jar:na]
+	at com.iotex.ethereumtracker.core.EthereumTracker.getBranchesAndTags(EthereumTracker.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.15.jar:5.3.15]
+	... 18 common frames omitted
+
+2022-02-25 15:58:17.422  INFO 7263 --- [main] c.i.e.EthereumtrackerApplication         : Starting EthereumtrackerApplication using Java 11.0.13 on chamberdeMacBook-Pro.local with PID 7263 (/Users/chamber/IdeaProjects/ethereumtracker/target/classes started by chamber in /Users/chamber/IdeaProjects/ethereumtracker)
+2022-02-25 15:58:17.425  INFO 7263 --- [main] c.i.e.EthereumtrackerApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 15:58:18.482  INFO 7263 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3334 (http)
+2022-02-25 15:58:18.492  INFO 7263 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 15:58:18.492  INFO 7263 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 15:58:18.566  INFO 7263 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 15:58:18.566  INFO 7263 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1089 ms
+2022-02-25 15:58:20.689  WARN 7263 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+2022-02-25 15:58:20.692  INFO 7263 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-25 15:58:20.712  INFO 7263 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-25 15:58:20.734 ERROR 7263 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.6.3.jar:2.6.3]
+	at com.iotex.ethereumtracker.EthereumtrackerApplication.main(EthereumtrackerApplication.java:19) ~[classes/:na]
+Caused by: com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:738) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:726) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:721) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:643) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:623) ~[fastjson-1.2.78.jar:na]
+	at com.iotex.ethereumtracker.core.EthereumTracker.getBranchesAndTags(EthereumTracker.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.15.jar:5.3.15]
+	... 18 common frames omitted
+
+2022-02-25 16:00:52.897  INFO 7290 --- [main] c.i.e.EthereumtrackerApplication         : Starting EthereumtrackerApplication using Java 11.0.13 on chamberdeMacBook-Pro.local with PID 7290 (/Users/chamber/IdeaProjects/ethereumtracker/target/classes started by chamber in /Users/chamber/IdeaProjects/ethereumtracker)
+2022-02-25 16:00:52.900  INFO 7290 --- [main] c.i.e.EthereumtrackerApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 16:00:53.973  INFO 7290 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3334 (http)
+2022-02-25 16:00:53.980  INFO 7290 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 16:00:53.980  INFO 7290 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 16:00:54.031  INFO 7290 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 16:00:54.031  INFO 7290 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1056 ms
+2022-02-25 16:00:56.048  WARN 7290 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+2022-02-25 16:00:56.051  INFO 7290 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-25 16:00:56.074  INFO 7290 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-25 16:00:56.095 ERROR 7290 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.6.3.jar:2.6.3]
+	at com.iotex.ethereumtracker.EthereumtrackerApplication.main(EthereumtrackerApplication.java:19) ~[classes/:na]
+Caused by: com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:738) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:726) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:721) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:643) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:623) ~[fastjson-1.2.78.jar:na]
+	at com.iotex.ethereumtracker.core.EthereumTracker.getBranchesAndTags(EthereumTracker.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.15.jar:5.3.15]
+	... 18 common frames omitted
+
+2022-02-25 16:02:55.297  INFO 7299 --- [main] c.i.e.EthereumtrackerApplication         : Starting EthereumtrackerApplication using Java 11.0.13 on chamberdeMacBook-Pro.local with PID 7299 (/Users/chamber/IdeaProjects/ethereumtracker/target/classes started by chamber in /Users/chamber/IdeaProjects/ethereumtracker)
+2022-02-25 16:02:55.300  INFO 7299 --- [main] c.i.e.EthereumtrackerApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 16:02:56.253  INFO 7299 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3334 (http)
+2022-02-25 16:02:56.260  INFO 7299 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 16:02:56.260  INFO 7299 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 16:02:56.313  INFO 7299 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 16:02:56.313  INFO 7299 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 956 ms
+2022-02-25 16:02:58.260  WARN 7299 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+2022-02-25 16:02:58.263  INFO 7299 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-25 16:02:58.286  INFO 7299 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-25 16:02:58.306 ERROR 7299 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.6.3.jar:2.6.3]
+	at com.iotex.ethereumtracker.EthereumtrackerApplication.main(EthereumtrackerApplication.java:19) ~[classes/:na]
+Caused by: com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:738) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:726) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:721) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:643) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:623) ~[fastjson-1.2.78.jar:na]
+	at com.iotex.ethereumtracker.core.EthereumTracker.getBranchesAndTags(EthereumTracker.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.15.jar:5.3.15]
+	... 18 common frames omitted
+
+2022-02-25 16:07:23.740  INFO 7341 --- [main] c.i.e.EthereumtrackerApplication         : Starting EthereumtrackerApplication using Java 11.0.13 on chamberdeMacBook-Pro.local with PID 7341 (/Users/chamber/IdeaProjects/ethereumtracker/target/classes started by chamber in /Users/chamber/IdeaProjects/ethereumtracker)
+2022-02-25 16:07:23.746  INFO 7341 --- [main] c.i.e.EthereumtrackerApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 16:07:24.806  INFO 7341 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3334 (http)
+2022-02-25 16:07:24.813  INFO 7341 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 16:07:24.813  INFO 7341 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 16:07:24.865  INFO 7341 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 16:07:24.865  INFO 7341 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 978 ms
+2022-02-25 16:07:26.840  WARN 7341 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+2022-02-25 16:07:26.843  INFO 7341 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-25 16:07:26.863  INFO 7341 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-25 16:07:26.884 ERROR 7341 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.6.3.jar:2.6.3]
+	at com.iotex.ethereumtracker.EthereumtrackerApplication.main(EthereumtrackerApplication.java:19) ~[classes/:na]
+Caused by: com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:738) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:726) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:721) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:643) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:623) ~[fastjson-1.2.78.jar:na]
+	at com.iotex.ethereumtracker.core.EthereumTracker.getBranchesAndTags(EthereumTracker.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.15.jar:5.3.15]
+	... 18 common frames omitted
+
+2022-02-25 16:07:56.253  INFO 7347 --- [main] c.i.e.EthereumtrackerApplication         : Starting EthereumtrackerApplication using Java 11.0.13 on chamberdeMacBook-Pro.local with PID 7347 (/Users/chamber/IdeaProjects/ethereumtracker/target/classes started by chamber in /Users/chamber/IdeaProjects/ethereumtracker)
+2022-02-25 16:07:56.299  INFO 7347 --- [main] c.i.e.EthereumtrackerApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 16:07:57.281  INFO 7347 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3334 (http)
+2022-02-25 16:07:57.287  INFO 7347 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 16:07:57.288  INFO 7347 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 16:07:57.335  INFO 7347 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 16:07:57.336  INFO 7347 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 952 ms
+2022-02-25 16:07:59.401  WARN 7347 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+2022-02-25 16:07:59.404  INFO 7347 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-02-25 16:07:59.424  INFO 7347 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-02-25 16:07:59.445 ERROR 7347 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ethereumTracker': Invocation of init method failed; nested exception is com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:160) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.15.jar:5.3.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:414) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.6.3.jar:2.6.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.6.3.jar:2.6.3]
+	at com.iotex.ethereumtracker.EthereumtrackerApplication.main(EthereumtrackerApplication.java:19) ~[classes/:na]
+Caused by: com.alibaba.fastjson.JSONException: field null expect '[', but {, pos 1, line 1, column 2{"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:738) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:726) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.parser.DefaultJSONParser.parseArray(DefaultJSONParser.java:721) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:643) ~[fastjson-1.2.78.jar:na]
+	at com.alibaba.fastjson.JSON.parseArray(JSON.java:623) ~[fastjson-1.2.78.jar:na]
+	at com.iotex.ethereumtracker.core.EthereumTracker.getBranchesAndTags(EthereumTracker.java:48) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:333) ~[spring-beans-5.3.15.jar:5.3.15]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:157) ~[spring-beans-5.3.15.jar:5.3.15]
+	... 18 common frames omitted
+
+2022-02-25 16:08:51.099  INFO 7410 --- [main] c.i.e.EthereumtrackerApplication         : Starting EthereumtrackerApplication using Java 11.0.13 on chamberdeMacBook-Pro.local with PID 7410 (/Users/chamber/IdeaProjects/ethereumtracker/target/classes started by chamber in /Users/chamber/IdeaProjects/ethereumtracker)
+2022-02-25 16:08:51.149  INFO 7410 --- [main] c.i.e.EthereumtrackerApplication         : No active profile set, falling back to default profiles: default
+2022-02-25 16:08:52.167  INFO 7410 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3334 (http)
+2022-02-25 16:08:52.174  INFO 7410 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-02-25 16:08:52.174  INFO 7410 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-25 16:08:52.219  INFO 7410 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-02-25 16:08:52.219  INFO 7410 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 980 ms
+2022-02-25 16:08:57.059  INFO 7410 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3334 (http) with context path ''
+2022-02-25 16:08:57.075  INFO 7410 --- [main] c.i.e.EthereumtrackerApplication         : Started EthereumtrackerApplication in 6.446 seconds (JVM running for 7.171)
+2022-02-25 16:08:58.400  INFO 7410 --- [scheduling-1] c.i.e.core.EthereumTracker               : 未发现新分支
+2022-02-25 16:08:59.018  INFO 7410 --- [scheduling-1] c.i.e.core.EthereumTracker               : 未发现新tag
+2022-02-25 16:08:59.619  INFO 7410 --- [scheduling-1] c.i.ethereumtracker.common.GetCommit     : common 目录下未发现新commit
+2022-02-25 16:09:00.210  INFO 7410 --- [scheduling-1] c.i.ethereumtracker.common.GetCommit     : core 目录下未发现新commit
+2022-02-25 16:09:00.848  INFO 7410 --- [scheduling-1] c.i.ethereumtracker.common.GetCommit     : core/state 目录下未发现新commit
+2022-02-25 16:09:01.723  INFO 7410 --- [scheduling-1] c.i.ethereumtracker.common.GetCommit     : core/types 目录下未发现新commit
+2022-02-25 16:09:02.370  INFO 7410 --- [scheduling-1] c.i.ethereumtracker.common.GetCommit     : core/vm 目录下未发现新commit
+2022-02-25 16:09:03.019  INFO 7410 --- [scheduling-1] c.i.ethereumtracker.common.GetCommit     : core/vm/runtime 目录下未发现新commit
+2022-02-25 16:09:03.668  INFO 7410 --- [scheduling-1] c.i.ethereumtracker.common.GetCommit     : ethclient 目录下未发现新commit
+2022-02-25 16:09:04.329  INFO 7410 --- [scheduling-1] c.i.ethereumtracker.common.GetCommit     : params/config.go 目录下未发现新commit
